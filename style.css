@@ -1,0 +1,151 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, p {
+    font-family: 'Outfit', sans-serif;
+    font-size: 18px;
+}
+main {
+    height: 100vh;
+    background-color: hsl(217, 54%, 11%);
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 90%;
+    margin: 0 auto;
+}
+
+.card {
+    display: grid;
+    grid-template-columns: 1fr;
+    background-color: hsl(216, 50%, 16%);
+    padding: 1.5rem;
+    width: 100%;
+    border-radius: 10px;
+    gap: 1rem;
+}
+
+.card-img {
+    background-image: url("images/image-equilibrium.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: all .3s ease-in;
+    border-radius: 10px;
+    position: relative;
+}
+
+.icon { 
+    position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: .5s ease;
+    border-radius: 10px;
+    background-color: hsla(178, 100%, 50%,.5);
+}
+
+.icon svg {
+    position: absolute;
+    top: 42%;
+    left: 42%;
+}
+
+.card-img:hover .icon {
+    opacity: 1;
+    
+}
+
+.card-title  h3 a {
+    font-size: 1.1rem;
+    color: hsl(0, 0%, 100%);
+    text-decoration: none;
+    transition: all .5s ease-in;
+}
+
+.card-title  h3 a:hover {
+    color:hsl(178, 100%, 50%);
+}
+
+.card-description p {
+    color: hsla(215, 51%, 70%, .6);
+    font-weight: 200;
+    font-size: 1rem;
+}
+
+.card-price {
+    display: flex;
+    justify-content: space-between;
+    gap: .5rem;
+    border-bottom: 1px solid hsl(215, 32%, 27%);
+    padding-bottom: 1rem;
+}
+
+.left span {
+    color: hsl(178, 100%, 50%);
+    font-weight: bold;
+}
+
+.right span {
+    color: hsla(215, 51%, 70%, .6);
+    
+}
+
+.left, .right {
+    display: flex;
+    align-items: center;
+    gap: .3rem;
+    font-size: .8rem;
+}
+
+
+.footer {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+.footer img {
+    width: 30px;
+    border-radius: 100%;
+    border: 1px solid white;
+}
+
+.footer p {
+    color:hsla(215, 51%, 70%, .6);
+    font-size: .9rem;
+}
+
+.footer span a {
+    color: white;
+    cursor: pointer;
+    text-decoration: none;
+    transition: all .5s ease-in;
+}
+
+.footer span a:hover {
+    color:hsl(178, 100%, 50%);
+}
+
+@media only screen and (min-width: 376px) {
+    .container {
+        width: 350px;
+    }
+}
